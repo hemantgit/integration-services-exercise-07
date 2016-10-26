@@ -1,0 +1,58 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:camel="http://camel.apache.org/schema/spring" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+    <camel:routeContext id="com.backbase.portal.integration.service.YourServiceName"
+        xmlns="http://camel.apache.org/schema/spring">
+        <route id="com.backbase.training.exercise07">
+            <from uri="restlet:/v2/customer-assets?restletBinding=#queryStringToHeadersRestletBinding" />
+
+            <log message="user: ${headers}" loggingLevel="DEBUG"/>
+
+            <setBody>
+                <simple>
+                    {
+                        "current-account":
+                        [
+                            {
+                                "id": "4495316",
+                                "currency": "USD",
+                                "alias": "Main Current Account of ${header.BackbaseUser}",
+                                "availableBalance": "500.00",
+                                "bookedBalance": "500.00",
+                                "accountIdentification":
+                                [
+                                    {
+                                        "id": "00000011100500S",
+                                        "scheme": "BBAN"
+                                    }
+                                ]
+                            }
+                        ]
+                        ,
+                        "card":
+                        [
+                            {
+                                "iconColor": "#e35a2d",
+                                "id": "4495321",
+                                "currency": "USD",
+                                "alias": "Visa Classic of ${header.BackbaseUser}",
+                                "availableBalance": "803.44",
+                                "bookedBalance": "803.44",
+                                "accountIdentification": [
+                                    {
+                                        "id": "00000011100161L",
+                                        "scheme": "BBAN"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                </simple>
+            </setBody>
+
+        </route>
+    </camel:routeContext>
+</beans>
