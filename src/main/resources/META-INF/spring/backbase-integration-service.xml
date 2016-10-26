@@ -29,7 +29,22 @@
                                         "scheme": "BBAN"
                                     }
                                 ]
+                            },
+                            {
+                                "id": "4495316",
+                                "currency": "USD",
+                                "alias": "Secondary Current Account of ${header.BackbaseUser}",
+                                "availableBalance": "1500.00",
+                                "bookedBalance": "1500.00",
+                                "accountIdentification":
+                                [
+                                    {
+                                        "id": "00000211100500S",
+                                        "scheme": "BBAN"
+                                    }
+                                ]
                             }
+
                         ]
                         ,
                         "card":
@@ -44,6 +59,20 @@
                                 "accountIdentification": [
                                     {
                                         "id": "00000011100161L",
+                                        "scheme": "BBAN"
+                                    }
+                                ]
+                            },
+                            {
+                                "iconColor": "#78e32d",
+                                "id": "4495356",
+                                "currency": "USD",
+                                "alias": "Mastercard of ${header.BackbaseUser}",
+                                "availableBalance": "102.33",
+                                "bookedBalance": "102.33",
+                                "accountIdentification": [
+                                    {
+                                        "id": "00000011100162L",
                                         "scheme": "BBAN"
                                     }
                                 ]
