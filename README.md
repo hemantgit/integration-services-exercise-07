@@ -1,18 +1,18 @@
 # Backbase Training Exercises
 
-## Portal Backend - Module 7: Yet another RESt example
+## Portal Backend - Module 7: Yet another REST example
 
-This example provides an example of REST call, simulating a datasource for the accounts widget (retail collection).
+This example provides an example of REST call, simulating a datasource for the *accounts widget* of the *retail collection*.
 
 ### Installation & Configuration
 
 - Clone this project into the **services** folder of your project
 
-- Include integration-service-exercise-07 module to the build. Open `services/pom.xml` and add **integration-service-exercise-07** in the `<modules>` section:
+- Include integration-services-exercise-07 module to the build. Open `services/pom.xml` and add **integration-services-exercise-07** in the `<modules>` section:
 	```xml
 	    <modules>
 	        ...	    
-	        <module>integration-service-exercise-07</module>
+	        <module>integration-services-exercise-07</module>
 	        ...
 	    </modules>
 	```	
@@ -23,7 +23,7 @@ This example provides an example of REST call, simulating a datasource for the a
 	```xml
 	    <dependency>
 	        <groupId>com.backbase.training</groupId>
-	        <artifactId>content-service-exercise-07</artifactId>
+	        <artifactId>integration-services-exercise-07</artifactId>
 	        <version>1.0-SNAPSHOT</version>
 	    </dependency>
 	```
